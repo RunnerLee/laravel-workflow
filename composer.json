@@ -1,0 +1,32 @@
+{
+    "name": "shein-plm/laravel-workflow",
+    "description": "use the symfony workflow component in laravel",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "RunnerLee",
+            "email": "runnerleer@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3.0",
+        "symfony/workflow": "^4.3",
+        "illuminate/support": "~5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Runner\\LaravelWorkflow\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Runner\\LaravelWorkflow\\WorkflowServiceProvider"
+            ],
+            "aliases": {
+                "Workflow": "Runner\\LaravelWorkflow\\WorkflowFacade"
+            }
+        }
+    }
+}
